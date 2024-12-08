@@ -689,7 +689,7 @@ const Flight = () => {
       flightDetails.passengers
     }\n\n${tripDetails}`;
 
-    const whatsappUrl = `https://wa.me/918076137439?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/919625072091?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
