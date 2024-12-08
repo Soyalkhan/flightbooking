@@ -20,7 +20,7 @@ function App() {
     setShowLoginPage(!showLoginPage);
   };
 
-  return (
+  return (  
     <div>
       <Navbar />
       <Hero />
