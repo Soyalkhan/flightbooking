@@ -38,9 +38,9 @@ const Contact = () => {
         <h3>Send us a message <img src={msg_icon} alt="" /></h3>
         <p>For any questions, suggestions, or feedback, feel free to contact us using the details below. Your input helps us improve our services for the community.</p>
         <ul>
-            <li><img src={mail_icon} alt="" />Admin@vorexos.com</li>
+            <li><img src={mail_icon} alt="" />prasadranjan654@gmail.com</li>
             <li><img src={phone_icon} alt="" />+919625072091</li>
-            <li><img src={location_icon} alt="" />A-101, Police colony, new kondli, delhi-110096</li>
+            <li><img src={location_icon} alt="" /> A-101, Police Colony, New Kondli, Delhi - 110096</li>
         </ul>
       </div>
       <div className="contact-col">
