@@ -128,7 +128,12 @@ const Hero = () => {
   };
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
+    const isNowMobile = window.innerWidth <= 768;
+    setIsMobile(isNowMobile);
+    setCurrentIndex(0); // Reset index
+    if (slider.current) {
+      slider.current.style.transform = 'translateX(0%)'; // Reset slider position
+    }
   };
 
   useEffect(() => {
@@ -140,10 +145,10 @@ const Hero = () => {
 
   // Add automatic slide effect every 3 seconds
   useEffect(() => {
-    const interval = setInterval(slideForward, 3000); // Slide every 3 seconds
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [currentIndex]); // Dependency array includes currentIndex to reset interval on index change
-
+    const interval = setInterval(slideForward, 3000); 
+    return () => clearInterval(interval); 
+  }, [slides, currentIndex]); 
+  
   return (
     <div className='hero-wrapper'>
       <div className='slider-wrapper'>
@@ -166,12 +171,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className='hero-text'>
-        <h2>Quick, Easy, and Tailored to You</h2>
-        <h1>Your Personal Portal to Flights, Getaways, and Adventure</h1>
-        <p>A fast and responsive website is essential for travelers to find and book flights effortlessly.</p>
-        <button className='btn'>Book Flight <img src={dark_arrow} alt="Arrow" /></button>
-      </div>
+
     </div>
   );
 };
